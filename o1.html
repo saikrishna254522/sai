@@ -1,85 +1,263 @@
+
 <!DOCTYPE html>
+
 <html>
 <head>
     <title>Student Registration Form</title>
+
+```
+<style>
+    body {
+        background-color: #d6f0ff;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 350px;
+        margin: 60px auto;
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px gray;
+        text-align: center;
+    }
+
+    h2 {
+        color: #003366;
+    }
+
+    input {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        width: 95%;
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #message {
+        display: none;
+        color: green;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+</style>
+```
+
 </head>
 
-<body style="background-color:#d6f0ff; font-family:Arial, sans-serif;">
+<body>
 
-<div style="width:350px; margin:60px auto; background:white; padding:25px; border-radius:10px; box-shadow:0px 0px 10px gray; text-align:center;">
+```
+<div class="container">
 
-    <h2 style="color:#003366;">Student Registration Form</h2>
+    <h2>Student Registration Form</h2>
 
-    <input type="text" id="fname" placeholder="First Name" style="width:90%; padding:10px; border:1px solid gray; border-radius:5px; font-size:15px;"><br><br>
+    <input type="text" id="fname" placeholder="First Name">
 
-    <input type="text" id="lname" placeholder="Last Name" style="width:90%; padding:10px; border:1px solid gray; border-radius:5px; font-size:15px;"><br><br>
+    <input type="text" id="lname" placeholder="Last Name">
 
-    <input type="text" id="roll" placeholder="Roll Number" style="width:90%; padding:10px; border:1px solid gray; border-radius:5px; font-size:15px;"><br><br>
+    <input type="text" id="roll" placeholder="Roll Number">
 
-    <input type="text" id="email" placeholder="Email" style="width:90%; padding:10px; border:1px solid gray; border-radius:5px; font-size:15px;"><br><br>
+    <input type="text" id="email" placeholder="Email">
 
-    <input type="text" id="phone" placeholder="Phone Number" style="width:90%; padding:10px; border:1px solid gray; border-radius:5px; font-size:15px;"><br><br>
+    <input type="text" id="phone" placeholder="Phone Number">
 
-    <button onclick="register()" style="width:95%; padding:10px; background:#007BFF; color:white; border:none; border-radius:5px; font-size:16px; cursor:pointer;">
-        Submit
-    </button>
+    <input type="text" id="altPhone" placeholder="Alternate Phone Number">
 
-    <p id="message" style="display:none; color:green; font-size:16px; font-weight:bold; margin-top:15px;">
+    <button onclick="register()">Submit</button>
+
+    <p id="message">
         ✔ Thank You for Registering!
     </p>
 
 </div>
 
+
 <script>
 
-function register()
-{
-    var fname = document.getElementById("fname").value;
-    var lname = document.getElementById("lname").value;
-    var roll = document.getElementById("roll").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
+    function register() {
 
-    // First Name Validation
-    if(!/^[A-Za-z]+$/.test(fname))
-    {
-        alert("First Name should contain only letters.");
-        return;
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var roll = document.getElementById("roll").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var altPhone = document.getElementById("altPhone").value;
+
+
+        // First Name Validation
+        if (!/^[A-Za-z]+$/.test(fname)) {
+            alert("First Name should contain only letters.");
+            return;
+        }
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Student Registration Form</title>
+
+```
+<style>
+    body {
+        background-color: #d6f0ff;
+        font-family: Arial, sans-serif;
     }
 
-    // Last Name Validation
-    if(!/^[A-Za-z]+$/.test(lname))
-    {
-        alert("Last Name should contain only letters.");
-        return;
+    .container {
+        width: 350px;
+        margin: 60px auto;
+        background-color: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px gray;
+        text-align: center;
     }
 
-    // Roll Number Validation
-    if(!/^[A-Za-z0-9]+$/.test(roll))
-    {
-        alert("Roll Number should contain only letters and numbers.");
-        return;
+    h2 {
+        color: #003366;
     }
 
-    // Email Validation
-    if(email.indexOf("@") == -1)
-    {
-        alert("Please enter a valid Email.");
-        return;
+    input {
+        width: 90%;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 5px;
+        font-size: 15px;
+        margin-bottom: 15px;
     }
 
-    // Phone Number Validation
-    if(!/^[0-9]{10}$/.test(phone))
-    {
-        alert("Phone Number should contain exactly 10 digits.");
-        return;
+    button {
+        width: 95%;
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
     }
 
-    // Display Success Message
-    document.getElementById("message").style.display = "block";
-}
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    #message {
+        display: none;
+        color: green;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<div class="container">
+
+    <h2>Student Registration Form</h2>
+
+
+    <input type="text" id="lname" placeholder="Last Name">
+
+    <input type="text" id="roll" placeholder="Roll Number">
+    <input type="text" id="phone" placeholder="Phone Number">
+
+
+    <p id="message">
+        ✔ Thank You for Registering!
+    </p>
+
+</div>
+
+
+
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var roll = document.getElementById("roll").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var altPhone = document.getElementById("altPhone").value;
+
+
+        // First Name Validation
+        if (!/^[A-Za-z]+$/.test(fname)) {
+            alert("First Name should contain only letters.");
+            return;
+        }
+
+
+        // Last Name Validation
+        if (!/^[A-Za-z]+$/.test(lname)) {
+            alert("Last Name should contain only letters.");
+            return;
+        }
+
+
+        // Roll Number Validation
+            return;
+        }
+
+
+            return;
+        }
+
+
+        // Alternate Phone Validation
+        if (altPhone != "" && !/^[0-9]{10}$/.test(altPhone)) {
+            alert("Alternate Phone Number should contain exactly 10 digits.");
+            return;
+        }
+
+
+        // Success Message
+        document.getElementById("message").style.display = "block";
+    }
 
 </script>
+```
 
 </body>
 </html>
+        // Phone Number Validation
+        if (!/^[0-9]{10}$/.test(phone)) {
+            alert("Phone Number should contain exactly 10 digits.");
+        if (!/^[A-Za-z0-9]+$/.test(roll)) {
+        if (email.indexOf("@") == -1) {
+            alert("Please enter a valid Email.");
+            alert("Roll Number should contain only letters and numbers.");
+            return;
+        // Email Validation
+        }
+
+
+<script>
+
+    function register() {
+    <input type="text" id="altPhone" placeholder="Alternate Phone Number">
+
+    <button onclick="register()">Submit</button>
+
+    <input type="text" id="email" placeholder="Email">
+
+
